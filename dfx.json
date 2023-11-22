@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "BlockbashICP_backend": {
+      "main": "src/BlockbashICP_backend/main.mo",
+      "type": "motoko"
+    },
+    "BlockbashICP_frontend": {
+      "dependencies": [
+        "BlockbashICP_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/BlockbashICP_frontend/src/index.html"
+      },
+      "source": [
+        "src/BlockbashICP_frontend/assets",
+        "dist/BlockbashICP_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
